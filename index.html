@@ -25,6 +25,40 @@
     height: auto;
   }
 
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
   
 </style>
 
@@ -46,9 +80,29 @@
 </head>
 <body>
 
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    
+    <p>Oscar Zago es el presidente del bloque de Diputados de La Libertad Avanza.</p>
+    <p>Al menos durante declaraciones a periodísticas, parece tener <a href="https://www.youtube.com/watch?v=Lt3Z4YY8d0w" rel="nofollow">problemas mandibulares</a>. <b>¡Ayudale a dejarla en su lugar!</b></p>
+    <p>Este es un juego sin fines de lucro que no juzga las libertades de los individuos
+    para consumir sustancias o votar leyes de mierda de acuerdo a sus creencias.</p>
+
+    <h2>Cómo jugar</h2>
+
+    <ul>
+    <li>Hacé click sobre el diputado Zago</li>
+    <li>Si su mandíbula está en la posición correcta (o sea, digamos), perfecto, pasarás al cuarto intermedio 😉</li>
+    <li>Si por el contrario la mandíbula está en la posición incorrecta, deberás seguir intentandolo.</li>
+    </ul>
+
+  </div>
+</div>
 <div id="imageContainer">
   <img src="zago0.png" id="rotatingImage" alt="Enderezá la mandíbula de Zago">
 </div>
+
 
 
 <script src="script.js"></script>

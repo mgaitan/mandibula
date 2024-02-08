@@ -6,6 +6,22 @@ document.addEventListener('DOMContentLoaded', function() {
   let intervalId;
   let rotationStopped = false;
 
+
+  const modal = document.getElementById("myModal");
+  modal.style.display = "block";
+
+  // Cierra el modal cuando el usuario hace clic en el botón de cerrar (x)
+  document.querySelector(".close").onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // Cierra el modal si el usuario hace clic fuera de él
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
   function changeImage() {
     currentIndex = Math.floor(Math.random() * images.length);
     imgElement.src = images[currentIndex];
